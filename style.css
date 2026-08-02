@@ -12,6 +12,7 @@ body {
     min-height: 100vh;
     position: relative;
     overflow-x: hidden;
+    transition: background 0.4s ease;
 }
 
 .stars {
@@ -62,6 +63,12 @@ h1 {
     font-weight: 600;
     letter-spacing: 0.03em;
     text-shadow: 0 0 12px rgba(198, 179, 151, 0.22);
+    transition: text-shadow 0.25s ease, transform 0.25s ease;
+}
+
+h1:hover {
+    text-shadow: 0 0 18px rgba(255, 235, 200, 0.35);
+    transform: translateY(-1px);
 }
 
 .tagline {
@@ -85,10 +92,12 @@ nav a {
     text-decoration: none;
     font-size: 0.95rem;
     opacity: 0.9;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
 nav a:hover {
     color: #d8c29f;
+    text-shadow: 0 0 10px rgba(235, 210, 180, 0.25);
 }
 
 main {
@@ -119,6 +128,12 @@ section p {
     margin: 0 auto;
     opacity: 0.92;
     max-width: 700px;
+    transition: transform 0.2s ease, text-shadow 0.2s ease;
+}
+
+section p:hover {
+    transform: translateY(-1px);
+    text-shadow: 0 0 10px rgba(255, 223, 185, 0.16);
 }
 
 .subtext {
@@ -142,10 +157,13 @@ section p {
     border-radius: 999px;
     background: rgba(255, 255, 255, 0.07);
     border: 1px solid rgba(255, 255, 255, 0.12);
+    transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
 }
 
 .links a:hover {
     background: rgba(255, 255, 255, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(255, 223, 185, 0.12);
 }
 
 footer {

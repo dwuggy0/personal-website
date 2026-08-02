@@ -1,41 +1,13 @@
-// Starchaser website effects
+const body = document.body;
+const glow = document.querySelector('.space-glow');
 
-console.log("Welcome to Starchaser's galaxy ✦");
+window.addEventListener('mousemove', (event) => {
+    const x = (event.clientX / window.innerWidth) * 100;
+    const y = (event.clientY / window.innerHeight) * 100;
 
-// Create small shooting star effect
+    if (glow) {
+        glow.style.background = `radial-gradient(circle at ${x}% ${y}%, rgba(255, 212, 162, 0.16), transparent 24%), radial-gradient(circle at 20% 20%, rgba(118, 138, 184, 0.14), transparent 30%), radial-gradient(circle at 80% 10%, rgba(163, 125, 104, 0.12), transparent 25%)`;
+    }
 
-function shootingStar(){
-
-    const star = document.createElement("div");
-
-    star.style.position="fixed";
-    star.style.width="3px";
-    star.style.height="3px";
-    star.style.background="white";
-    star.style.left=Math.random()*window.innerWidth+"px";
-    star.style.top="0px";
-    star.style.boxShadow="0 0 15px white";
-
-    document.body.appendChild(star);
-
-    let position=0;
-
-    let animation=setInterval(()=>{
-
-        position+=8;
-
-        star.style.transform=
-        `translate(${position}px,${position}px)`;
-
-        if(position>window.innerWidth){
-
-            clearInterval(animation);
-            star.remove();
-
-        }
-
-    },20);
-
-}
-
-setInterval(shootingStar,5000);
+    body.style.background = `radial-gradient(circle at ${x}% ${y}%, #3a4c72 0%, #0d1422 45%, #080b12 100%)`;
+});
