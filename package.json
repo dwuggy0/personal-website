@@ -1,0 +1,10 @@
+{
+  "name": "personal-website",
+  "version": "1.0.0",
+  "description": "Personal website with a lightweight editable backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/test-server.js"
+  }
+}
