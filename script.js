@@ -2,7 +2,6 @@
 
 console.log("Welcome to Starchaser's galaxy ✦");
 
-
 // Create small shooting star effect
 
 function shootingStar(){
@@ -19,9 +18,7 @@ function shootingStar(){
 
     document.body.appendChild(star);
 
-
     let position=0;
-
 
     let animation=setInterval(()=>{
 
@@ -29,7 +26,6 @@ function shootingStar(){
 
         star.style.transform=
         `translate(${position}px,${position}px)`;
-
 
         if(position>window.innerWidth){
 
@@ -41,6 +37,5 @@ function shootingStar(){
     },20);
 
 }
-
 
 setInterval(shootingStar,5000);
